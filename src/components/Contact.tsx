@@ -23,7 +23,7 @@ const Contact = () => {
             </p>
             <h4>Resume</h4>
             <p>
-              <a href="/Hrishikesh_Ahire_Resume.docx" target="_blank" data-cursor="disable">
+              <a href={import.meta.env.BASE_URL + "Hrishikesh_Ahire_Resume.docx"} target="_blank" data-cursor="disable">
                 Download Resume <MdArrowOutward />
               </a>
             </p>
