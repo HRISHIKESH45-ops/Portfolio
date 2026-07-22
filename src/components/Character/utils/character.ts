@@ -49,15 +49,15 @@ const setCharacter = (
                 }
                 if (mesh.material) {
                   if (Array.isArray(mesh.material)) {
-                    mesh.material.forEach(m => { m.flatShading = false; m.needsUpdate = true; });
+                    mesh.material.forEach((m: any) => { m.flatShading = false; m.needsUpdate = true; });
                   } else {
-                    mesh.material.flatShading = false;
+                    (mesh.material as any).flatShading = false;
                     mesh.material.needsUpdate = true;
                   }
                 }
                 
                 // Restore original eyes material
-                if (mesh.material && mesh.material.name === "EyeDarkBrownMaterial") {
+                if (mesh.material && (mesh.material as any).name === "EyeDarkBrownMaterial") {
                   if (originalEyeMat) {
                     mesh.material = originalEyeMat;
                   }

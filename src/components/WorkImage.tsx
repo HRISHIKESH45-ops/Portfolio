@@ -3,6 +3,7 @@ import { MdArrowOutward } from "react-icons/md";
 
 interface Props {
   image: string;
+  images?: string[];
   alt?: string;
   video?: string;
   link?: string;
@@ -44,7 +45,7 @@ const WorkImage = (props: Props) => {
             <MdArrowOutward />
           </a>
         )}
-        {imagesToRender.map((img, i) => (
+        {imagesToRender.map((img: string, i: number) => (
           props.link ? (
             <a href={props.link} target="_blank" key={i} style={{ scrollSnapAlign: 'center', flexShrink: 0, width: '100%' }}>
                <img src={img} alt={props.alt} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
