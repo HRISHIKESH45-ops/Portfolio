@@ -1,0 +1,166 @@
+.edu-cert-section {
+  width: var(--cWidth);
+  max-width: var(--cMaxWidth);
+  margin: 80px auto;
+  position: relative;
+  z-index: 10;
+}
+
+.edu-cert-section h3.title {
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-weight: 400;
+  color: var(--accentColor);
+  margin-bottom: 24px;
+}
+
+.edu-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 32px;
+  margin-bottom: 50px;
+  backdrop-filter: blur(10px);
+}
+
+.edu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.edu-header h4 {
+  font-size: 22px;
+  font-weight: 600;
+  font-family: "Geist", sans-serif;
+  color: #ffffff;
+  margin: 0;
+}
+
+.edu-header h5 {
+  font-size: 16px;
+  color: #a0a8c0;
+  margin: 6px 0 0 0;
+  font-weight: 400;
+}
+
+.edu-grad {
+  background: rgba(0, 168, 255, 0.12);
+  border: 1px solid rgba(0, 168, 255, 0.3);
+  color: #00a8ff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.cpi-badge {
+  font-size: 16px;
+  color: #e2e8f0;
+  margin-top: 20px;
+  font-weight: 500;
+}
+
+.cpi-badge span {
+  font-size: 24px;
+  font-weight: 700;
+  color: #c481ff;
+  margin-left: 8px;
+}
+
+.sem-heading {
+  font-size: 15px;
+  color: #808598;
+  margin-top: 24px;
+  margin-bottom: 12px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.sem-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+}
+
+.sem-item {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 12px 16px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sem-name {
+  font-size: 12px;
+  color: #a0a8c0;
+}
+
+.sem-score {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.dual-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+@media screen and (min-width: 1025px) {
+  .dual-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.cert-list,
+.achieve-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cert-item,
+.achieve-item {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 20px 24px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.cert-item:hover,
+.achieve-item:hover {
+  transform: translateY(-3px);
+  border-color: rgba(196, 129, 255, 0.3);
+}
+
+.cert-item h4,
+.achieve-item h4 {
+  font-size: 17px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 6px 0;
+  font-family: "Geist", sans-serif;
+}
+
+.cert-item p {
+  font-size: 14px;
+  color: #00a8ff;
+  margin: 0;
+  font-weight: 500;
+}
+
+.achieve-item p {
+  font-size: 14px;
+  color: #a0a8c0;
+  margin: 0;
+  line-height: 1.6;
+}

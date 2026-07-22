@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Snippet</title>
+    <style>
+        body {
+            background-color: #1e1e2e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Fira Code', 'Courier New', Courier, monospace;
+        }
+        .window {
+            background-color: #282a36;
+            border-radius: 10px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            width: 800px;
+            overflow: hidden;
+            border: 1px solid #44475a;
+        }
+        .title-bar {
+            background-color: #21222c;
+            padding: 10px 15px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #44475a;
+        }
+        .buttons {
+            display: flex;
+            gap: 8px;
+        }
+        .button {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+        .close { background-color: #ff5f56; }
+        .minimize { background-color: #ffbd2e; }
+        .maximize { background-color: #27c93f; }
+        .title {
+            color: #6272a4;
+            font-size: 14px;
+            margin-left: 20px;
+            font-family: sans-serif;
+        }
+        .code {
+            padding: 20px;
+            color: #f8f8f2;
+            font-size: 16px;
+            line-height: 1.5;
+            white-space: pre-wrap;
+        }
+        .keyword { color: #ff79c6; }
+        .string { color: #f1fa8c; }
+        .comment { color: #6272a4; }
+        .function { color: #50fa7b; }
+    </style>
+</head>
+<body>
+    <div class="window">
+        <div class="title-bar">
+            <div class="buttons">
+                <div class="button close"></div>
+                <div class="button minimize"></div>
+                <div class="button maximize"></div>
+            </div>
+            <div class="title">Rock_paper_scissor_game.py</div>
+        </div>
+        <div class="code">
+<span class="keyword">import</span> os
+<span class="keyword">import</span> random <span class="keyword">as</span> rn
+<span class="keyword">from</span> playsound <span class="keyword">import</span> playsound
+
+current_dir = os.path.dirname(os.path.abspath(__file__))
+win = os.path.join(current_dir, <span class="string">"win.mp3"</span>)
+lose = os.path.join(current_dir, <span class="string">"lose.mp3"</span>)
+
+print(<span class="string">"WELCOME TO THE ISHOWSPEED ROCK-PAPER-SCISSORS SHOWDOWN!!!"</span>)
+print(<span class="string">"SUUUUUWIIIII! PLAY UNTIL YOU WIN OR RAGE QUIT!\n"</span>)
+
+count = <span class="string">0</span>
+
+<span class="keyword">while True</span>:
+    <span class="keyword">try</span>:
+        user_input = int(input(<span class="string">"1 for Rock\n2 for Paper\n3 for Scissor\nEnter your choice: "</span>))
+        <span class="keyword">if</span> user_input &gt; <span class="string">3</span> <span class="keyword">or</span> user_input &lt; <span class="string">1</span>:
+            print(<span class="string">"Invalid choice! Speed says RAGE QUIT!"</span>)
+            <span class="keyword">break</span>
+    <span class="keyword">except</span> ValueError:
+        print(<span class="string">"Numbers only! SUUUUUWIIIII!"</span>)
+        <span class="keyword">continue</span></div>
+    </div>
+</body>
+</html>

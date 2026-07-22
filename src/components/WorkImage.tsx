@@ -21,24 +21,42 @@ const WorkImage = (props: Props) => {
     }
   };
 
+  const imagesToRender = props.images && props.images.length > 0 ? props.images : [props.image];
+
   return (
     <div className="work-image">
-      <a
+      <div
         className="work-image-in"
-        href={props.link}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={() => setIsVideo(false)}
-        target="_blank"
         data-cursor={"disable"}
+        style={{
+          display: 'flex',
+          overflowX: 'auto',
+          scrollSnapType: 'x mandatory',
+          gap: '10px',
+          width: '100%',
+          scrollbarWidth: 'none'
+        }}
       >
         {props.link && (
-          <div className="work-link">
+          <a className="work-link" href={props.link} target="_blank">
             <MdArrowOutward />
-          </div>
+          </a>
         )}
-        <img src={props.image} alt={props.alt} />
+        {imagesToRender.map((img, i) => (
+          props.link ? (
+            <a href={props.link} target="_blank" key={i} style={{ scrollSnapAlign: 'center', flexShrink: 0, width: '100%' }}>
+               <img src={img} alt={props.alt} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+            </a>
+          ) : (
+            <div key={i} style={{ scrollSnapAlign: 'center', flexShrink: 0, width: '100%' }}>
+              <img src={img} alt={props.alt} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+            </div>
+          )
+        ))}
         {isVideo && <video src={video} autoPlay muted playsInline loop></video>}
-      </a>
+      </div>
     </div>
   );
 };

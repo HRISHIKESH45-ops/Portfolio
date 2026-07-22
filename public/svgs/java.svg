@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-150 -50 400 200" width="1024" height="512">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-color="#000" flood-opacity="0.15"/>
+    </filter>
+    <linearGradient id="cupGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ea6060" />
+      <stop offset="100%" stop-color="#af2c2c" />
+    </linearGradient>
+    <linearGradient id="steamGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3ca0f0" />
+      <stop offset="100%" stop-color="#1450a0" />
+    </linearGradient>
+  </defs>
+  <rect x="-150" y="-50" width="400" height="200" fill="#ffffff" />
+  <g filter="url(#shadow)">
+    <!-- Steam Curves -->
+    <path d="M42,15 Q36,25 44,35 T38,50" fill="none" stroke="url(#steamGrad)" stroke-width="4" stroke-linecap="round"/>
+    <path d="M54,10 Q48,22 56,33 T48,48" fill="none" stroke="url(#steamGrad)" stroke-width="4" stroke-linecap="round"/>
+    <!-- Cup Body -->
+    <path d="M25,50 L75,50 C75,50 72,78 50,78 C28,78 25,50 25,50 Z" fill="url(#cupGrad)" />
+    <!-- Cup Handle -->
+    <path d="M73,56 C82,56 82,68 73,68" fill="none" stroke="url(#cupGrad)" stroke-width="5" stroke-linecap="round" />
+    <!-- Plate / Saucer -->
+    <ellipse cx="50" cy="84" rx="32" ry="5" fill="url(#steamGrad)" />
+  </g>
+</svg>

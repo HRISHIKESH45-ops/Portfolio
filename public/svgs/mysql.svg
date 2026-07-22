@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-150 -50 400 200" width="1024" height="512">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="125%" height="125%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-color="#000" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="dolphinGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00758F" />
+      <stop offset="100%" stop-color="#005A6F" />
+    </linearGradient>
+    <linearGradient id="orangeAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F29111" />
+      <stop offset="100%" stop-color="#D77A00" />
+    </linearGradient>
+  </defs>
+  <rect x="-150" y="-50" width="400" height="200" fill="#ffffff" />
+  <g filter="url(#shadow)">
+    <!-- Dolphin Body -->
+    <path d="M78,42 C72,28 55,24 45,30 C38,34 35,42 37,50 C38,54 41,58 39,64 C38,67 33,68 31,65 C32,71 39,72 43,68 C47,64 47,56 50,54 C58,51 68,56 75,51 C80,48 82,45 78,42 Z" fill="url(#dolphinGrad)" />
+    <!-- Fin -->
+    <path d="M51,32 C54,23 60,20 62,23 C60,29 57,32 51,32 Z" fill="url(#dolphinGrad)" />
+    <!-- Database platters beneath -->
+    <path d="M22,76 C22,70 42,70 50,70 C58,70 78,70 78,76 C78,82 58,82 50,82 C42,82 22,82 22,76 Z" fill="url(#orangeAccent)" opacity="0.9" />
+    <path d="M22,82 L22,86 C22,90 42,91 50,91 C58,91 78,90 78,86 L78,82 Z" fill="url(#orangeAccent)" />
+  </g>
+</svg>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-150 -50 400 200" width="1024" height="512">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-color="#000" flood-opacity="0.15"/>
+    </filter>
+    <linearGradient id="pandaDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2c3e50" />
+      <stop offset="100%" stop-color="#1a252f" />
+    </linearGradient>
+    <linearGradient id="pandaMint" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1abc9c" />
+      <stop offset="100%" stop-color="#16a085" />
+    </linearGradient>
+  </defs>
+  <rect x="-150" y="-50" width="400" height="200" fill="#ffffff" />
+  <g filter="url(#shadow)">
+    <!-- Face Background -->
+    <circle cx="50" cy="52" r="32" fill="#FFF" stroke="#E6ECEF" stroke-width="2"/>
+    <!-- Ears -->
+    <circle cx="26" cy="28" r="11" fill="url(#pandaDark)" />
+    <circle cx="74" cy="28" r="11" fill="url(#pandaDark)" />
+    <!-- Eye Patches -->
+    <ellipse cx="38" cy="48" rx="8" ry="11" fill="url(#pandaDark)" transform="rotate(-15 38 48)" />
+    <ellipse cx="62" cy="48" rx="8" ry="11" fill="url(#pandaDark)" transform="rotate(15 62 48)" />
+    <!-- Eyes (White part + Pupil) -->
+    <circle cx="39" cy="46" r="3" fill="#FFF" />
+    <circle cx="61" cy="46" r="3" fill="#FFF" />
+    <!-- Nose -->
+    <polygon points="46,59 54,59 50,64" fill="url(#pandaMint)" />
+  </g>
+</svg>

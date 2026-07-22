@@ -27,6 +27,14 @@ const setCharacter = (
           blobUrl,
           async (gltf) => {
             character = gltf.scene;
+            
+            let originalEyeMat: THREE.Material | null = null;
+            try {
+              originalEyeMat = await gltf.parser.getDependency('material', 3);
+            } catch (err) {
+              console.error("Failed to fetch originalEyeMat from parser:", err);
+            }
+
             await renderer.compileAsync(character, camera, scene);
             character.traverse((child: any) => {
               if (child.isMesh) {
@@ -34,6 +42,26 @@ const setCharacter = (
                 child.castShadow = true;
                 child.receiveShadow = true;
                 mesh.frustumCulled = true;
+                
+                // Force smooth shading
+                if (mesh.geometry) {
+                  mesh.geometry.computeVertexNormals();
+                }
+                if (mesh.material) {
+                  if (Array.isArray(mesh.material)) {
+                    mesh.material.forEach(m => { m.flatShading = false; m.needsUpdate = true; });
+                  } else {
+                    mesh.material.flatShading = false;
+                    mesh.material.needsUpdate = true;
+                  }
+                }
+                
+                // Restore original eyes material
+                if (mesh.material && mesh.material.name === "EyeDarkBrownMaterial") {
+                  if (originalEyeMat) {
+                    mesh.material = originalEyeMat;
+                  }
+                }
               }
             });
             resolve(gltf);

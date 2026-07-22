@@ -30,6 +30,35 @@
   letter-spacing: 1px;
 }
 
+.about-large-heading {
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-top: 10px;
+  margin-bottom: 24px;
+  font-family: "Geist", sans-serif;
+  color: #ffffff;
+}
+
+.about-large-heading span {
+  color: #c481ff;
+}
+
+.about-me p.para {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #a0a8c0;
+  margin-bottom: 16px;
+  letter-spacing: 0.2px;
+}
+
+.about-me p.highlight-para {
+  color: #00a8ff;
+  font-weight: 600;
+  font-size: 16px;
+}
+
 @media only screen and (min-width: 600px) {
   .about-section {
     justify-content: center;
@@ -37,7 +66,7 @@
 }
 @media only screen and (min-width: 768px) {
   .about-me {
-    width: 500px;
+    width: 550px;
     max-width: calc(100% - 70px);
     transform: translateY(0%);
   }
@@ -50,22 +79,23 @@
     width: var(--cWidth);
     justify-content: right;
     max-width: 1920px;
-    height: var(--vh);
-    padding: 0px;
+    height: auto;
+    min-height: var(--vh);
+    padding: 80px 0;
     opacity: 1;
   }
   .about-me {
     padding: 0px;
-    width: 50%;
+    width: 48%;
   }
-  .about-me p {
-    font-size: 1.9vw;
-    line-height: 2.3vw;
+  .about-me p.para {
+    font-size: 16px;
+    line-height: 1.7;
   }
 }
 @media only screen and (min-width: 1950px) {
-  .about-me p {
-    font-size: 2.5rem;
-    line-height: 2.7rem;
+  .about-me p.para {
+    font-size: 18px;
+    line-height: 1.8;
   }
 }

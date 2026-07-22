@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-150 -50 400 200" width="1024" height="512">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-color="#000" flood-opacity="0.15"/>
+    </filter>
+    <linearGradient id="sparkGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD166" />
+      <stop offset="100%" stop-color="#F78C6C" />
+    </linearGradient>
+  </defs>
+  <rect x="-150" y="-50" width="400" height="200" fill="#ffffff" />
+  <g filter="url(#shadow)">
+    <!-- Terminal Box / Prompt Base -->
+    <rect x="18" y="25" width="64" height="48" rx="8" fill="#1E1E24" />
+    <text x="26" y="54" font-family="monospace" font-size="20" font-weight="bold" fill="#00E676">&gt;_</text>
+    <!-- Sparkling Magic Prompt Star -->
+    <path d="M68,14 L71,23 L80,26 L71,29 L68,38 L65,29 L56,26 L65,23 Z" fill="url(#sparkGold)" />
+    <path d="M82,38 L83.5,42.5 L88,44 L83.5,45.5 L82,50 L80.5,45.5 L76,44 L80.5,42.5 Z" fill="url(#sparkGold)" opacity="0.8" />
+  </g>
+</svg>

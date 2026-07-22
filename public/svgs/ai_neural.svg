@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-150 -50 400 200" width="1024" height="512">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-color="#000" flood-opacity="0.15"/>
+    </filter>
+    <linearGradient id="aiCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="100%" stop-color="#4facfe" />
+    </linearGradient>
+  </defs>
+  <rect x="-150" y="-50" width="400" height="200" fill="#ffffff" />
+  <g filter="url(#shadow)">
+    <!-- Connections -->
+    <line x1="25" y1="50" x2="50" y2="25" stroke="url(#aiCyan)" stroke-width="4" stroke-linecap="round" />
+    <line x1="25" y1="50" x2="50" y2="50" stroke="url(#aiCyan)" stroke-width="4" stroke-linecap="round" />
+    <line x1="25" y1="50" x2="50" y2="75" stroke="url(#aiCyan)" stroke-width="4" stroke-linecap="round" />
+    <line x1="50" y1="25" x2="75" y2="50" stroke="#b19ffb" stroke-width="4" stroke-linecap="round" />
+    <line x1="50" y1="50" x2="75" y2="50" stroke="#b19ffb" stroke-width="4" stroke-linecap="round" />
+    <line x1="50" y1="75" x2="75" y2="50" stroke="#b19ffb" stroke-width="4" stroke-linecap="round" />
+    <!-- Nodes -->
+    <circle cx="25" cy="50" r="7" fill="url(#aiCyan)" />
+    <circle cx="50" cy="25" r="7" fill="url(#aiCyan)" />
+    <circle cx="50" cy="50" r="9" fill="#8a3ffc" />
+    <circle cx="50" cy="75" r="7" fill="url(#aiCyan)" />
+    <circle cx="75" cy="50" r="10" fill="#8a3ffc" />
+  </g>
+</svg>

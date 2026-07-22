@@ -13,28 +13,51 @@ import {
 
 const textureLoader = new THREE.TextureLoader();
 const imageUrls = [
-  "/images/react2.webp",
-  "/images/next2.webp",
-  "/images/node2.webp",
-  "/images/express.webp",
-  "/images/mongo.webp",
-  "/images/mysql.webp",
-  "/images/typescript.webp",
-  "/images/javascript.webp",
+  "/svgs/python.svg",
+  "/svgs/mysql.svg",
+  "/svgs/pandas.svg",
+  "/svgs/numpy.svg",
+  "/svgs/matplotlib.svg",
+  "/svgs/powerbi.svg",
+  "/svgs/git.svg",
+  "/svgs/github.svg",
+  "/svgs/vscode.svg",
+  "/svgs/jupyter.svg",
+  "/svgs/ai_neural.svg",
+  "/svgs/prompt_engineering.svg",
+  "/svgs/rag.svg",
+  "/svgs/llm.svg",
+  "/svgs/stitch.svg"
 ];
-const textures = imageUrls.map((url) => textureLoader.load(url));
+const textures = imageUrls.map((url) => {
+  const tex = textureLoader.load(url);
+  tex.colorSpace = THREE.SRGBColorSpace;
+  return tex;
+});
 
 const sphereGeometry = new THREE.SphereGeometry(1, 28, 28);
 
-const spheres = [...Array(30)].map(() => ({
+const textureIndices: number[] = [];
+for (let i = 0; i < 30; i++) {
+  textureIndices.push(i % 15);
+}
+// Shuffle indices to distribute them randomly
+for (let i = textureIndices.length - 1; i > 0; i--) {
+  const j = Math.floor(Math.random() * (i + 1));
+  [textureIndices[i], textureIndices[j]] = [textureIndices[j], textureIndices[i]];
+}
+
+const spheres = [...Array(30)].map((_, i) => ({
   scale: [0.7, 1, 0.8, 1, 1][Math.floor(Math.random() * 5)],
+  textureIndex: textureIndices[i],
 }));
 
 type SphereProps = {
   vec?: THREE.Vector3;
   scale: number;
+  textureIndex: number;
   r?: typeof THREE.MathUtils.randFloatSpread;
-  material: THREE.MeshPhysicalMaterial;
+  material: THREE.Material;
   isActive: boolean;
 };
 
@@ -129,24 +152,25 @@ const TechStack = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollY = window.scrollY || document.documentElement.scrollTop;
-      const threshold = document
-        .getElementById("work")!
-        .getBoundingClientRect().top;
-      setIsActive(scrollY > threshold);
+      const techElem = document.querySelector(".techstack");
+      if (techElem) {
+        const rect = techElem.getBoundingClientRect();
+        setIsActive(rect.top < window.innerHeight && rect.bottom > 0);
+      }
     };
-    document.querySelectorAll(".header a").forEach((elem) => {
-      const element = elem as HTMLAnchorElement;
-      element.addEventListener("click", () => {
-        const interval = setInterval(() => {
-          handleScroll();
-        }, 10);
-        setTimeout(() => {
-          clearInterval(interval);
-        }, 1000);
-      });
-    });
     window.addEventListener("scroll", handleScroll);
+    handleScroll();
+
+    // Force GSAP to recalculate pin spacing after lazy-loaded component mounts
+    import("gsap/ScrollTrigger").then((module) => {
+      setTimeout(() => {
+        module.ScrollTrigger.refresh();
+      }, 500);
+      setTimeout(() => {
+        module.ScrollTrigger.refresh();
+      }, 1000);
+    });
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -154,21 +178,55 @@ const TechStack = () => {
   const materials = useMemo(() => {
     return textures.map(
       (texture) =>
-        new THREE.MeshPhysicalMaterial({
+        new THREE.MeshStandardMaterial({
           map: texture,
-          emissive: "#ffffff",
-          emissiveMap: texture,
-          emissiveIntensity: 0.3,
-          metalness: 0.5,
-          roughness: 1,
-          clearcoat: 0.1,
+          color: "#ffffff",
+          roughness: 0.9,
+          metalness: 0.1,
         })
     );
   }, []);
 
+  const techCategories = [
+    {
+      category: "Programming",
+      tools: ["Python", "Java"],
+    },
+    {
+      category: "Data",
+      tools: ["Pandas", "NumPy", "Matplotlib", "Power BI", "MySQL"],
+    },
+    {
+      category: "Development",
+      tools: ["VS Code", "Git", "GitHub", "Jupyter Notebook", "MySQL Workbench"],
+    },
+    {
+      category: "AI",
+      tools: ["Prompt Engineering", "Google Stitch", "RAG", "LLM Fundamentals", "Generative AI"],
+    },
+  ];
+
   return (
     <div className="techstack">
-      <h2> My Techstack</h2>
+      <h2>TECH STACK</h2>
+      <p className="tech-subtitle">
+        Technologies I use to design, build, analyze, and continuously learn.
+      </p>
+
+      <div className="tech-categories-grid">
+        {techCategories.map((cat, idx) => (
+          <div className="tech-cat-card" key={idx}>
+            <h4>{cat.category}</h4>
+            <div className="tech-tags-flex">
+              {cat.tools.map((tool, tIdx) => (
+                <span className="tech-tag" key={tIdx}>
+                  {tool}
+                </span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
 
       <Canvas
         shadows
@@ -193,7 +251,7 @@ const TechStack = () => {
             <SphereGeo
               key={i}
               {...props}
-              material={materials[Math.floor(Math.random() * materials.length)]}
+              material={materials[props.textureIndex]}
               isActive={isActive}
             />
           ))}

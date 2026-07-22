@@ -53,13 +53,24 @@ const Scene = () => {
       let progress = setProgress((value) => setLoading(value));
       const { loadCharacter } = setCharacter(renderer, scene, camera);
 
+      let isMounted = true;
+
       loadCharacter().then((gltf) => {
-        if (gltf) {
+        if (gltf && isMounted) {
           const animations = setAnimations(gltf);
           hoverDivRef.current && animations.hover(gltf, hoverDivRef.current);
           mixer = animations.mixer;
           let character = gltf.scene;
           setChar(character);
+
+          // Clear any previously added character nodes to prevent duplicate models
+          for (let i = scene.children.length - 1; i >= 0; i--) {
+            const child = scene.children[i];
+            if (child.type === "Group" || child.name === "Scene" || child.name === "metarig002") {
+              scene.remove(child);
+            }
+          }
+
           scene.add(character);
           headBone = character.getObjectByName("spine006") || null;
           screenLight = character.getObjectByName("screenlight") || null;
@@ -127,6 +138,7 @@ const Scene = () => {
       };
       animate();
       return () => {
+        isMounted = false;
         clearTimeout(debounce);
         scene.clear();
         renderer.dispose();

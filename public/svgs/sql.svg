@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-150 -50 400 200" width="1024" height="512">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-color="#000" flood-opacity="0.15"/>
+    </filter>
+    <linearGradient id="dbBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#50a7f9" />
+      <stop offset="100%" stop-color="#1b6cb8" />
+    </linearGradient>
+  </defs>
+  <rect x="-150" y="-50" width="400" height="200" fill="#ffffff" />
+  <g filter="url(#shadow)" fill="url(#dbBlue)">
+    <!-- Top Platter -->
+    <path d="M20,30 C20,20 80,20 80,30 C80,40 20,40 20,30 Z" />
+    <!-- Middle Platter -->
+    <path d="M20,45 C20,45 20,55 50,55 C80,55 80,45 80,45 L80,55 C80,65 20,65 20,55 Z" opacity="0.9" />
+    <!-- Bottom Platter -->
+    <path d="M20,65 C20,65 20,75 50,75 C80,75 80,65 80,65 L80,75 C80,85 20,85 20,75 Z" opacity="0.8" />
+  </g>
+</svg>

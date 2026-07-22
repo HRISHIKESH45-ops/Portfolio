@@ -30,7 +30,7 @@ const WhatIDo = () => {
         <h2 className="title">
           W<span className="hat-h2">HAT</span>
           <div>
-            I<span className="do-h2"> DO</span>
+            I<span className="do-h2"> BUILD</span>
           </div>
         </h2>
       </div>
@@ -87,28 +87,25 @@ const WhatIDo = () => {
             <div className="what-corner"></div>
 
             <div className="what-content-in">
-              <h3>DEVELOP</h3>
-              <h4>Description</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-                quia aliquid laboriosam ducimus sit molestiae.
-              </p>
-              <h5>Skillset & tools</h5>
-              <div className="what-content-flex">
-                <div className="what-tags">JavaScript</div>
-                <div className="what-tags">TypeScript</div>
-                <div className="what-tags">Three.js</div>
-                <div className="what-tags">React</div>
-                <div className="what-tags">Css</div>
-                <div className="what-tags">Node.js</div>
-                <div className="what-tags">Next.js</div>
-                <div className="what-tags">Express.js</div>
-                <div className="what-tags">PHP</div>
-                <div className="what-tags">MySql</div>
+              <h3>PYTHON DEVELOPMENT</h3>
+              <div className="what-content-details">
+                <h4>Description</h4>
+                <p>
+                  Developing clean, modular, and scalable Python applications using Object-Oriented Programming, MySQL, and modern software design principles.
+                </p>
+                <h5>Skillset & tools</h5>
+                <div className="what-content-flex">
+                  <div className="what-tags">Python</div>
+                  <div className="what-tags">OOP</div>
+                  <div className="what-tags">MySQL</div>
+                  <div className="what-tags">Modules</div>
+                  <div className="what-tags">Architecture</div>
+                </div>
               </div>
               <div className="what-arrow"></div>
             </div>
           </div>
+
           <div
             className="what-content what-noTouch"
             ref={(el) => setRef(el, 1)}
@@ -128,22 +125,96 @@ const WhatIDo = () => {
             </div>
             <div className="what-corner"></div>
             <div className="what-content-in">
-              <h3>DESIGN</h3>
-              <h4>Description</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-                quia aliquid laboriosam ducimus sit molestiae
-              </p>
-              <h5>Skillset & tools</h5>
-              <div className="what-content-flex">
-                <div className="what-tags">Blender</div>
-                <div className="what-tags">Zbrush</div>
-                <div className="what-tags">UI Design</div>
-                <div className="what-tags">Motion</div>
-                <div className="what-tags">Rigging</div>
-                <div className="what-tags">3D Animation</div>
-                <div className="what-tags">Character Design</div>
-                <div className="what-tags">Modelling</div>
+              <h3>DATA ANALYTICS</h3>
+              <div className="what-content-details">
+                <h4>Description</h4>
+                <p>
+                  Cleaning, analyzing, and visualizing real-world datasets with Pandas, NumPy, Matplotlib, and Power BI to uncover meaningful insights.
+                </p>
+                <h5>Skillset & tools</h5>
+                <div className="what-content-flex">
+                  <div className="what-tags">Pandas</div>
+                  <div className="what-tags">NumPy</div>
+                  <div className="what-tags">Matplotlib</div>
+                  <div className="what-tags">Power BI</div>
+                  <div className="what-tags">Visualization</div>
+                </div>
+              </div>
+              <div className="what-arrow"></div>
+            </div>
+          </div>
+
+          <div
+            className="what-content what-noTouch"
+            ref={(el) => setRef(el, 2)}
+          >
+            <div className="what-border1">
+              <svg height="100%">
+                <line
+                  x1="0"
+                  y1="100%"
+                  x2="100%"
+                  y2="100%"
+                  stroke="white"
+                  strokeWidth="2"
+                  strokeDasharray="6,6"
+                />
+              </svg>
+            </div>
+            <div className="what-corner"></div>
+            <div className="what-content-in">
+              <h3>ARTIFICIAL INTELLIGENCE</h3>
+              <div className="what-content-details">
+                <h4>Description</h4>
+                <p>
+                  Exploring Prompt Engineering, Retrieval-Augmented Generation (RAG), LLM workflows, and AI fundamentals while building toward advanced Machine Learning.
+                </p>
+                <h5>Skillset & tools</h5>
+                <div className="what-content-flex">
+                  <div className="what-tags">Prompt Engineering</div>
+                  <div className="what-tags">Google Stitch</div>
+                  <div className="what-tags">RAG</div>
+                  <div className="what-tags">LLM Workflows</div>
+                  <div className="what-tags">Generative AI</div>
+                </div>
+              </div>
+              <div className="what-arrow"></div>
+            </div>
+          </div>
+
+          <div
+            className="what-content what-noTouch"
+            ref={(el) => setRef(el, 3)}
+          >
+            <div className="what-border1">
+              <svg height="100%">
+                <line
+                  x1="0"
+                  y1="100%"
+                  x2="100%"
+                  y2="100%"
+                  stroke="white"
+                  strokeWidth="2"
+                  strokeDasharray="6,6"
+                />
+              </svg>
+            </div>
+            <div className="what-corner"></div>
+            <div className="what-content-in">
+              <h3>PROBLEM SOLVING</h3>
+              <div className="what-content-details">
+                <h4>Description</h4>
+                <p>
+                  Turning ideas into practical software through structured thinking, debugging, experimentation, and continuous learning.
+                </p>
+                <h5>Skillset & tools</h5>
+                <div className="what-content-flex">
+                  <div className="what-tags">Debugging</div>
+                  <div className="what-tags">Critical Thinking</div>
+                  <div className="what-tags">System Design</div>
+                  <div className="what-tags">Algorithms</div>
+                  <div className="what-tags">Continuous Learning</div>
+                </div>
               </div>
               <div className="what-arrow"></div>
             </div>
