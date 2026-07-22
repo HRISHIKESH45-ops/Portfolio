@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-150 -50 400 200" width="1024" height="512">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-color="#000" flood-opacity="0.15"/>
+    </filter>
+    <linearGradient id="vsBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#23a9f2" />
+      <stop offset="100%" stop-color="#007acc" />
+    </linearGradient>
+  </defs>
+  <rect x="-150" y="-50" width="400" height="200" fill="#ffffff" />
+  <g filter="url(#shadow)" fill="url(#vsBlue)">
+    <!-- Stylized ribbon infinity path resembling the VS Code icon -->
+    <path d="M18,30 L36,18 L76,50 L36,82 L18,70 Z" opacity="0.8"/>
+    <path d="M76,50 L18,80 L18,20 Z" />
+    <path d="M54,50 L18,30 L36,50 Z" opacity="0.6"/>
+  </g>
+</svg>

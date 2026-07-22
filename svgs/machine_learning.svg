@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-150 -50 400 200" width="1024" height="512">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-color="#000" flood-opacity="0.15"/>
+    </filter>
+    <linearGradient id="mlPink" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff758c" />
+      <stop offset="100%" stop-color="#ff7eb3" />
+    </linearGradient>
+  </defs>
+  <rect x="-150" y="-50" width="400" height="200" fill="#ffffff" />
+  <g filter="url(#shadow)">
+    <!-- Circuit brain representation (Simplified geometric brain lobes) -->
+    <path d="M50,15 C30,15 20,28 20,48 C20,68 35,78 50,78 Z" fill="url(#mlPink)" opacity="0.9" />
+    <path d="M50,15 C70,15 80,28 80,48 C80,68 65,78 50,78 Z" fill="#8e44ad" opacity="0.8" />
+    <!-- Connector circuit path overlays -->
+    <circle cx="40" cy="35" r="3" fill="#FFF" />
+    <circle cx="60" cy="35" r="3" fill="#FFF" />
+    <circle cx="35" cy="55" r="4" fill="#FFF" />
+    <circle cx="65" cy="55" r="4" fill="#FFF" />
+    <path d="M35,55 L50,45 L65,55" stroke="#FFF" stroke-width="2.5" fill="none" stroke-linecap="round" />
+  </g>
+</svg>

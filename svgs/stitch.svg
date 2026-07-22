@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-150 -50 400 200" width="1024" height="512">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-color="#000" flood-opacity="0.15"/>
+    </filter>
+    <linearGradient id="stitchG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4285F4" />
+      <stop offset="50%" stop-color="#EA4335" />
+      <stop offset="100%" stop-color="#FBBC05" />
+    </linearGradient>
+  </defs>
+  <rect x="-150" y="-50" width="400" height="200" fill="#ffffff" />
+  <g filter="url(#shadow)" fill="none" stroke="url(#stitchG)" stroke-width="8" stroke-linecap="round">
+    <!-- Interwoven nodes structure -->
+    <path d="M25,25 C40,40 40,60 25,75" />
+    <path d="M75,25 C60,40 60,60 75,75" />
+    <line x1="30" y1="50" x2="70" y2="50" stroke-dasharray="1,12" />
+  </g>
+</svg>

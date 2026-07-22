@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-150 -50 400 200" width="1024" height="512">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-color="#000" flood-opacity="0.15"/>
+    </filter>
+    <linearGradient id="geminiGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9bc5fc" />
+      <stop offset="50%" stop-color="#4e8bf6" />
+      <stop offset="100%" stop-color="#e28bf0" />
+    </linearGradient>
+  </defs>
+  <rect x="-150" y="-50" width="400" height="200" fill="#ffffff" />
+  <g filter="url(#shadow)">
+    <!-- Classic Gemini Double-Star Graphic Spark -->
+    <path d="M50,15 Q50,42 22,45 Q50,48 50,75 Q50,48 78,45 Q50,42 50,15 Z" fill="url(#geminiGrad)" />
+    <!-- Secondary Offset Sparkle -->
+    <path d="M72,60 Q72,71 62,72 Q72,73 72,84 Q72,73 82,72 Q72,71 72,60 Z" fill="url(#geminiGrad)" opacity="0.8" />
+  </g>
+</svg>
