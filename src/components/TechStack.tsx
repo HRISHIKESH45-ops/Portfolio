@@ -13,21 +13,21 @@ import {
 
 const textureLoader = new THREE.TextureLoader();
 const imageUrls = [
-  "/svgs/python.svg",
-  "/svgs/mysql.svg",
-  "/svgs/pandas.svg",
-  "/svgs/numpy.svg",
-  "/svgs/matplotlib.svg",
-  "/svgs/powerbi.svg",
-  "/svgs/git.svg",
-  "/svgs/github.svg",
-  "/svgs/vscode.svg",
-  "/svgs/jupyter.svg",
-  "/svgs/ai_neural.svg",
-  "/svgs/prompt_engineering.svg",
-  "/svgs/rag.svg",
-  "/svgs/llm.svg",
-  "/svgs/stitch.svg"
+  import.meta.env.BASE_URL + "svgs/python.svg",
+  import.meta.env.BASE_URL + "svgs/mysql.svg",
+  import.meta.env.BASE_URL + "svgs/pandas.svg",
+  import.meta.env.BASE_URL + "svgs/numpy.svg",
+  import.meta.env.BASE_URL + "svgs/matplotlib.svg",
+  import.meta.env.BASE_URL + "svgs/powerbi.svg",
+  import.meta.env.BASE_URL + "svgs/git.svg",
+  import.meta.env.BASE_URL + "svgs/github.svg",
+  import.meta.env.BASE_URL + "svgs/vscode.svg",
+  import.meta.env.BASE_URL + "svgs/jupyter.svg",
+  import.meta.env.BASE_URL + "svgs/ai_neural.svg",
+  import.meta.env.BASE_URL + "svgs/prompt_engineering.svg",
+  import.meta.env.BASE_URL + "svgs/rag.svg",
+  import.meta.env.BASE_URL + "svgs/llm.svg",
+  import.meta.env.BASE_URL + "svgs/stitch.svg"
 ];
 const textures = imageUrls.map((url) => {
   const tex = textureLoader.load(url);

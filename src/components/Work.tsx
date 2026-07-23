@@ -80,11 +80,11 @@ const Work = () => {
               description: "Designed an interactive analytics dashboard using Spotify data to visualize music trends, artist popularity, listening behavior, and key performance insights through dynamic charts and filters.",
               tools: "Power BI, Data Visualization, Analytics, Dashboard Design",
               images: [
-                "/images/spotify/Executive_Overview.png",
-                "/images/spotify/Artist_Performance_Hub.png",
-                "/images/spotify/Audio_DNA_Lab.png",
-                "/images/spotify/Music_Evolution_Timeline.png",
-                "/images/spotify/Platform_Wars.png",
+                import.meta.env.BASE_URL + "images/spotify/Executive_Overview.png",
+                import.meta.env.BASE_URL + "images/spotify/Artist_Performance_Hub.png",
+                import.meta.env.BASE_URL + "images/spotify/Audio_DNA_Lab.png",
+                import.meta.env.BASE_URL + "images/spotify/Music_Evolution_Timeline.png",
+                import.meta.env.BASE_URL + "images/spotify/Platform_Wars.png",
               ]
             },
             {
@@ -107,7 +107,7 @@ const Work = () => {
               category: "Python",
               description: "Developed an interactive Python game inspired by IShowSpeed featuring game logic, score tracking, multiple rounds, and an engaging command-line experience.",
               tools: "Python, Game Logic, CLI, Programming Fundamentals",
-              image: "/images/rps_code.png"
+              image: import.meta.env.BASE_URL + "images/rps_code.png"
             },
           ].map((project, index) => (
             <div className="work-box" key={index}>
@@ -124,7 +124,7 @@ const Work = () => {
                 <p>{project.tools}</p>
               </div>
               {/* @ts-ignore */}
-              <WorkImage image={project.image || "/images/placeholder.webp"} images={project.images} alt={project.title} />
+              <WorkImage image={project.image || import.meta.env.BASE_URL + "images/placeholder.webp"} images={project.images} alt={project.title} />
             </div>
           ))}
         </div>
