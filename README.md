@@ -1,8 +1,22 @@
-# Hrishikesh Ahire - Portfolio
+# 🚀 Hrishikesh Ahire - 3D Interactive Portfolio
 
-This repository contains the source code for the personal portfolio website of **Hrishikesh Ahire**.
+Welcome to the source code of my personal portfolio website! 
 
-## Copyright and License
+### 🔗 **[View the Live Portfolio Here](https://HRISHIKESH45-ops.github.io/Portfolio/)**
+
+## 📖 About This Project
+This portfolio is a highly interactive, 3D-integrated web experience designed to showcase my skills in modern web development, data analysis, and software engineering. It features smooth scrolling animations, an interactive 3D character, and a dynamic physics-based technology stack visualization.
+
+### ✨ Key Features
+- **Immersive 3D Graphics:** Utilizes `Three.js` and `@react-three/fiber` to render a custom 3D character and physics-based objects.
+- **Cinematic Animations:** Powered by `GSAP` and `ScrollTrigger` for seamless, high-performance scroll animations.
+- **Physics Engine:** Integrated `@react-three/rapier` for realistic 3D object physics and interactions.
+- **Modern Tech Stack:** Built with React, Vite, TypeScript, and customized Vanilla CSS for optimal performance and styling.
+
+## 🏆 Certifications & Resume
+This repository also contains a collection of my professional certifications and my detailed resume, located in the `Certificates/` directory.
+
+## ⚠️ Copyright and License
 
 **© 2026 Hrishikesh Ahire. All Rights Reserved.**
 
