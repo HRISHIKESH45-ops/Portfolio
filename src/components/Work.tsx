@@ -93,6 +93,7 @@ const Work = () => {
               category: "Python • MySQL",
               description: "Developing a modular student management application featuring secure authentication, role-based access, MySQL integration, CRUD operations, and separate dashboards for administrators, teachers, and staff.",
               tools: "Python, MySQL, OOP, CLI, Authentication",
+              image: import.meta.env.BASE_URL + "images/student_mgmt_code.png"
             },
             {
               num: "03",
