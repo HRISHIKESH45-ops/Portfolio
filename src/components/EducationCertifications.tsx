@@ -62,10 +62,6 @@ const EducationCertifications = () => {
               <p><a href={import.meta.env.BASE_URL + "Certificates/Participation_certi.jpeg"} target="_blank" rel="noreferrer" style={{ color: '#00d2ff', textDecoration: 'none' }}>View Certificate</a></p>
             </div>
             <div className="cert-item">
-              <h4>FindSkill AI</h4>
-              <p><a href="#" target="_blank" rel="noreferrer" style={{ color: '#00d2ff', textDecoration: 'none' }}>View Certificate</a></p>
-            </div>
-            <div className="cert-item">
               <h4>Generative AI</h4>
               <p><a href={import.meta.env.BASE_URL + "Certificates/Gen_AI_certificate.pdf"} target="_blank" rel="noreferrer" style={{ color: '#00d2ff', textDecoration: 'none' }}>View Certificate</a></p>
             </div>
