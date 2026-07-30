@@ -47,23 +47,23 @@ const EducationCertifications = () => {
           <div className="cert-list">
             <div className="cert-item">
               <h4>Google Stitch for Beginners</h4>
-              <p>Google • <a href="#" target="_blank" rel="noreferrer" style={{ color: '#00d2ff', textDecoration: 'none' }}>View Certificate</a></p>
+              <p><a href={import.meta.env.BASE_URL + "Certificates/cert1.jpeg"} target="_blank" rel="noreferrer" style={{ color: '#00d2ff', textDecoration: 'none' }}>View Certificate</a></p>
             </div>
             <div className="cert-item">
               <h4>Introduction to Retrieval-Augmented Generation</h4>
-              <p>IBM SkillsBuild • <a href="#" target="_blank" rel="noreferrer" style={{ color: '#00d2ff', textDecoration: 'none' }}>View Certificate</a></p>
+              <p><a href={import.meta.env.BASE_URL + "Certificates/cert2.jpeg"} target="_blank" rel="noreferrer" style={{ color: '#00d2ff', textDecoration: 'none' }}>View Certificate</a></p>
             </div>
             <div className="cert-item">
               <h4>Generative AI for All</h4>
-              <p>Microsoft × Physics Wallah • <a href="#" target="_blank" rel="noreferrer" style={{ color: '#00d2ff', textDecoration: 'none' }}>View Certificate</a></p>
+              <p><a href={import.meta.env.BASE_URL + "Certificates/cert3.jpeg"} target="_blank" rel="noreferrer" style={{ color: '#00d2ff', textDecoration: 'none' }}>View Certificate</a></p>
             </div>
             <div className="cert-item">
               <h4>Google Student Ambassador</h4>
-              <p>Gemini Labs EP-1 • <a href="#" target="_blank" rel="noreferrer" style={{ color: '#00d2ff', textDecoration: 'none' }}>View Certificate</a></p>
+              <p><a href={import.meta.env.BASE_URL + "Certificates/cert4.jpeg"} target="_blank" rel="noreferrer" style={{ color: '#00d2ff', textDecoration: 'none' }}>View Certificate</a></p>
             </div>
             <div className="cert-item">
               <h4>FindSkill AI</h4>
-              <p>Score: 100% • <a href="#" target="_blank" rel="noreferrer" style={{ color: '#00d2ff', textDecoration: 'none' }}>View Certificate</a></p>
+              <p><a href={import.meta.env.BASE_URL + "Certificates/cert5.jpeg"} target="_blank" rel="noreferrer" style={{ color: '#00d2ff', textDecoration: 'none' }}>View Certificate</a></p>
             </div>
             <div className="cert-item">
               <h4>Generative AI</h4>
