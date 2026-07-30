@@ -44,7 +44,7 @@ const Career = () => {
               <h3>2026</h3>
             </div>
             <p>
-              Developed multiple practical applications including a Student Management System, Expense Tracker, and interactive Python projects while learning MySQL and modular application architecture.
+              Developed multiple practical applications including InsightForge AI, a Student Management System, and interactive Python projects while learning MySQL and modular application architecture.
             </p>
           </div>
           <div className="career-info-box">

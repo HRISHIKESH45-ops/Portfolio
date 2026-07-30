@@ -97,10 +97,11 @@ const Work = () => {
             },
             {
               num: "03",
-              title: "Expense Tracker",
-              category: "Python",
-              description: "Building a personal finance application for recording expenses, managing categories, monitoring budgets, and generating reports using CSV-based data storage.",
-              tools: "Python, CSV, Budget Management, Data Processing",
+              title: "InsightForge AI",
+              category: "React • Node.js • Gemini AI",
+              description: "An AI-powered data analytics platform featuring automated EDA, deterministic data cleaning, and Gemini AI-driven business insights using a Bring Your Own Key (BYOK) architecture.",
+              tools: "React, TypeScript, Node.js, Express, Gemini AI, Recharts",
+              image: import.meta.env.BASE_URL + "images/insightforge_overview.png"
             },
             {
               num: "04",
